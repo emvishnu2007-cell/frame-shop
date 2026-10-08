@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+  body { @apply bg-cream text-charcoal font-sans antialiased; }
+  h1, h2, h3, h4 { @apply font-serif tracking-tight; }
+  img { @apply max-w-full; }
+  ::selection { background: #E8DCC8; }
+  :focus-visible { outline: 2px solid #A8803F; outline-offset: 2px; }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition duration-200 disabled:cursor-not-allowed disabled:opacity-50 active:scale-[0.98]; }
+  .btn-primary { @apply btn bg-charcoal text-cream hover:bg-charcoal-700 shadow-card; }
+  .btn-gold { @apply btn bg-bronze text-white hover:bg-bronze-600 shadow-card; }
+  .btn-outline { @apply btn border border-charcoal/25 bg-transparent text-charcoal hover:border-charcoal hover:bg-charcoal hover:text-cream; }
+  .btn-ghost { @apply btn bg-transparent text-charcoal hover:bg-beige/60; }
+  .btn-danger { @apply btn bg-red-600 text-white hover:bg-red-700; }
+  .btn-sm { @apply px-4 py-2 text-xs; }
+  .input { @apply w-full rounded-xl border border-beige-300 bg-white px-4 py-3 text-sm text-charcoal placeholder:text-charcoal-400 transition focus:border-bronze focus:outline-none focus:ring-2 focus:ring-bronze/20 disabled:bg-cream-200; }
+  .input-error { @apply border-red-400 focus:border-red-500 focus:ring-red-200; }
+  .label { @apply mb-1.5 block text-xs font-semibold uppercase tracking-wider text-charcoal-500; }
+  .field-error { @apply mt-1 text-xs text-red-600; }
+  .card { @apply rounded-2xl border border-beige/70 bg-white shadow-card; }
+  .badge { @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold; }
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.25em] text-bronze; }
+  .section-y { @apply py-16 sm:py-20 lg:py-24; }
+  .table-th { @apply px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-charcoal-500; }
+  .table-td { @apply px-4 py-3 text-sm; }
+}
+
+@keyframes float { 0%,100% { transform: translateY(0) rotate(var(--r,0deg)); } 50% { transform: translateY(-10px) rotate(var(--r,0deg)); } }
+.animate-float { animation: float 7s ease-in-out infinite; }
+
+@keyframes shimmer { 100% { transform: translateX(100%); } }
+.skeleton { position: relative; overflow: hidden; background: #EFE7DA; border-radius: 0.75rem; }
+.skeleton::after { content: ''; position: absolute; inset: 0; transform: translateX(-100%); background: linear-gradient(90deg, transparent, rgba(255,255,255,.6), transparent); animation: shimmer 1.4s infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
