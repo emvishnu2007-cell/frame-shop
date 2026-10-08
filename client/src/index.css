@@ -4,11 +4,11 @@
 
 @layer base {
   html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
-  body { @apply bg-cream text-charcoal font-sans antialiased; }
+  body { @apply bg-dusty-pink text-charcoal font-sans antialiased; }
   h1, h2, h3, h4 { @apply font-serif tracking-tight; }
   img { @apply max-w-full; }
-  ::selection { background: #E8DCC8; }
-  :focus-visible { outline: 2px solid #A8803F; outline-offset: 2px; }
+  ::selection { background: #E9D7DA; }
+  :focus-visible { outline: 2px solid #C88F9F; outline-offset: 2px; }
 }
 
 @layer components {
@@ -36,7 +36,7 @@
 .animate-float { animation: float 7s ease-in-out infinite; }
 
 @keyframes shimmer { 100% { transform: translateX(100%); } }
-.skeleton { position: relative; overflow: hidden; background: #EFE7DA; border-radius: 0.75rem; }
+.skeleton { position: relative; overflow: hidden; background: #F0E5E5; border-radius: 0.75rem; }
 .skeleton::after { content: ''; position: absolute; inset: 0; transform: translateX(-100%); background: linear-gradient(90deg, transparent, rgba(255,255,255,.6), transparent); animation: shimmer 1.4s infinite; }
 
 @media (prefers-reduced-motion: reduce) {

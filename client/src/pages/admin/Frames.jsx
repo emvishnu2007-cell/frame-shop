@@ -90,8 +90,8 @@ function FrameForm({ frame, categories, onClose, onSaved }) {
         <Field label="Mat colour (preview)" error={err('matHex')}><div className="flex gap-2"><input type="color" className="h-11 w-14 cursor-pointer rounded-lg border border-beige-300" value={form.matHex} onChange={set('matHex')} /><input className="input" value={form.matHex} onChange={set('matHex')} /></div></Field>
         <Field label="Border style"><select className="input" value={form.borderStyle} onChange={set('borderStyle')}><option value="thin">Slim</option><option value="classic">Classic</option><option value="wide">Gallery (wide mat)</option><option value="ornate">Ornate</option></select></Field>
         <div className="flex flex-col justify-end gap-2 pb-2">
-          <label className="flex items-center gap-2 text-sm"><input type="checkbox" className="h-4 w-4 accent-[#A8803F]" checked={form.isFeatured} onChange={set('isFeatured')} /> Featured on home page</label>
-          <label className="flex items-center gap-2 text-sm"><input type="checkbox" className="h-4 w-4 accent-[#A8803F]" checked={form.isActive} onChange={set('isActive')} /> Active (visible to customers)</label>
+          <label className="flex items-center gap-2 text-sm"><input type="checkbox" className="h-4 w-4 accent-[#C88F9F]" checked={form.isFeatured} onChange={set('isFeatured')} /> Featured on home page</label>
+          <label className="flex items-center gap-2 text-sm"><input type="checkbox" className="h-4 w-4 accent-[#C88F9F]" checked={form.isActive} onChange={set('isActive')} /> Active (visible to customers)</label>
         </div>
       </div>
 

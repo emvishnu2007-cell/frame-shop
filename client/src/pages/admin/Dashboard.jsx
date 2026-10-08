@@ -21,13 +21,13 @@ function RevenueChart({ daily, currency }) {
   return (
     <div>
       <svg viewBox={`0 0 ${W} ${H + 28}`} className="w-full" role="img" aria-label="Revenue for the last 14 days">
-        {[0, 0.5, 1].map((t) => <line key={t} x1={pad} x2={W - pad} y1={H - t * (H - 16)} y2={H - t * (H - 16)} stroke="#E8DCC8" strokeDasharray="4 4" />)}
+        {[0, 0.5, 1].map((t) => <line key={t} x1={pad} x2={W - pad} y1={H - t * (H - 16)} y2={H - t * (H - 16)} stroke="#E9D7DA" strokeDasharray="4 4" />)}
         {daily.map((d, i) => {
           const h = (d.revenue / max) * (H - 16);
           return (
             <g key={d.date}>
-              <rect x={pad + i * bw + 4} y={H - h} width={bw - 8} height={Math.max(h, d.revenue > 0 ? 2 : 0)} rx="4" fill="#A8803F"><title>{`${d.date}: ${formatMoney(d.revenue, currency)} (${d.orders} orders)`}</title></rect>
-              <text x={pad + i * bw + bw / 2} y={H + 18} textAnchor="middle" fontSize="10" fill="#6B665F">{d.date.slice(8)}</text>
+              <rect x={pad + i * bw + 4} y={H - h} width={bw - 8} height={Math.max(h, d.revenue > 0 ? 2 : 0)} rx="4" fill="#C88F9F"><title>{`${d.date}: ${formatMoney(d.revenue, currency)} (${d.orders} orders)`}</title></rect>
+              <text x={pad + i * bw + bw / 2} y={H + 18} textAnchor="middle" fontSize="10" fill="#9B6D7C">{d.date.slice(8)}</text>
             </g>
           );
         })}

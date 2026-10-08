@@ -83,7 +83,7 @@ function OrderModal({ id, onClose, onChanged }) {
               <select id="o-pay" className="input" value={order.paymentStatus} disabled={Boolean(busy)} onChange={(e) => update({ paymentStatus: e.target.value }, 'pay')}>
                 {PAYMENT_STATUSES.map((s) => <option key={s}>{s}</option>)}
               </select></div>
-            <label className="flex items-center gap-2 sm:col-span-2"><input type="checkbox" checked={notify} onChange={(e) => setNotify(e.target.checked)} className="h-4 w-4 accent-[#A8803F]" /> Email the customer when the status changes</label>
+            <label className="flex items-center gap-2 sm:col-span-2"><input type="checkbox" checked={notify} onChange={(e) => setNotify(e.target.checked)} className="h-4 w-4 accent-[#C88F9F]" /> Email the customer when the status changes</label>
           </div>
 
           <div className="flex flex-wrap gap-2">

@@ -27,7 +27,7 @@ function Hero() {
   const { settings } = useSettings();
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-cream via-cream to-beige-100" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-dusty-pink via-dusty-pink to-beige-100" />
       <div className="container-x grid items-center gap-10 py-12 sm:py-16 lg:grid-cols-2 lg:gap-6 lg:py-24">
         <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}>
           <p className="eyebrow mb-5 flex items-center gap-2"><Sparkles className="h-4 w-4" /> {settings.shop_name}</p>
@@ -86,7 +86,7 @@ function Categories() {
   const cats = data ? data.categories : [];
   if (!cats.length) return null;
   return (
-    <section className="section-y bg-white">
+    <section className="section-y bg-dusty-pink">
       <div className="container-x">
         <SectionHeading eyebrow="Collections" title="Shop by category" subtitle="Whatever the occasion, there is a frame for it." />
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-5">
@@ -188,7 +188,7 @@ function Reviews() {
   const reviews = data ? data.reviews : [];
   if (!reviews.length) return null;
   return (
-    <section className="section-y bg-white">
+    <section className="section-y bg-dusty-pink">
       <div className="container-x">
         <SectionHeading eyebrow="Reviews" title="Loved by our customers" />
         <div className="grid gap-5 md:grid-cols-3">

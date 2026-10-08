@@ -29,7 +29,7 @@ export async function payOnline(order, shopName) {
       description: `Booking ${order.orderId}`,
       order_id: created.razorpayOrderId,
       prefill: { name: order.customerName, email: order.email, contact: order.phone },
-      theme: { color: '#A8803F' },
+      theme: { color: '#581D32' },
       handler: async (resp) => {
         try {
           await api.verifyRazorpay(order.orderId, {
